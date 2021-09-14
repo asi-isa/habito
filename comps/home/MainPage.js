@@ -12,8 +12,15 @@ export default function MainPage() {
   const today = new Date();
   const nextDays = [];
   for (let _ = 0; _ < days; _++) {
+    const nextDay = addDays(today, _).getDate();
     nextDays.push(
-      <th className={styles.tablehead_date}>{addDays(today, _).getDate()}'</th>
+      <th
+        className={`${styles.tablehead_date} ${
+          nextDay === today.getDate() && styles.today
+        }`}
+      >
+        {nextDay}'
+      </th>
     );
   }
 

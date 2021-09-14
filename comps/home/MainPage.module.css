@@ -4,15 +4,15 @@
 .tabledata_desc,
 .tabledata,
 .date,
-.new_habit,
 .tablerow {
   border: 2px solid var(--color-50);
   border-radius: 0.2rem;
   padding: 0.2rem;
 }
 
-.done {
-  background-color: var(--accent);
+.today {
+  border: 2px solid var(--accent);
+  color: var(--accent);
 }
 
 .new_habit {
@@ -21,7 +21,12 @@
   align-items: center;
   padding: 0.3rem;
   cursor: pointer;
+  border: 2px solid var(--color-80);
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+  margin-top: 0.3rem;
 }
 .new_habit svg {
   transform: scale(1.5);
+  color: var(--color-80);
 }
