@@ -4,11 +4,9 @@ import styles from "./Habit.module.css";
 
 export default function Habit(props) {
   // für desktop size nötig
-  const daysInMonth = getDaysInMonth(props.date);
+  // const daysInMonth = getDaysInMonth(props.date);
   const habitCheckboxes = [];
-
-  // for small screen sizes: 7
-  for (let day = 0; day < 7; day++) {
+  for (let day = 0; day < props.days; day++) {
     habitCheckboxes.push(<Checkbox />);
   }
 
