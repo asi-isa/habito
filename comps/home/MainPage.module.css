@@ -1,0 +1,14 @@
+.tablerow_head,
+.tablehead,
+.tablehead_date,
+.tabledata_desc,
+.tabledata,
+.tablerow {
+  border: 2px solid var(--color-50);
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+}
+
+.done {
+  background-color: var(--accent);
+}
