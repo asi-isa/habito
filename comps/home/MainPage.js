@@ -7,7 +7,7 @@ import NewHabitForm from "../habit/NewHabitForm";
 
 export default function MainPage() {
   const [showNewHabitForm, setShowNewHabitForm] = useState(false);
-  const habits = [];
+  const [habits, setHabits] = useState([]);
   const days = 7;
   const today = new Date();
   const nextDays = [];
@@ -19,6 +19,14 @@ export default function MainPage() {
 
   function toggleNewHabitForm() {
     setShowNewHabitForm(!showNewHabitForm);
+  }
+
+  function newHabitHandler(e) {
+    e.preventDefault();
+    const habitName = e.currentTarget.elements[0].value;
+
+    // api call to supabase
+    setHabits([...habits, <Habit habitName={habitName} days={days} />]);
   }
 
   return (
@@ -43,7 +51,12 @@ export default function MainPage() {
         </tr>
       </table>
 
-      {showNewHabitForm && <NewHabitForm />}
+      {showNewHabitForm && (
+        <NewHabitForm
+          newHabitHandler={newHabitHandler}
+          toggleNewHabitForm={toggleNewHabitForm}
+        />
+      )}
     </main>
   );
 }
