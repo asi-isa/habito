@@ -1,0 +1,6 @@
+.habit_name {
+  border: 2px solid var(--color-50);
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+  cursor: pointer;
+}

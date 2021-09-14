@@ -3,6 +3,8 @@
 .tablehead_date,
 .tabledata_desc,
 .tabledata,
+.date,
+.new_habit,
 .tablerow {
   border: 2px solid var(--color-50);
   border-radius: 0.2rem;
@@ -11,4 +13,14 @@
 
 .done {
   background-color: var(--accent);
+}
+
+.new_habit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+}
+.new_habit svg {
+  transform: scale(1.5);
 }
