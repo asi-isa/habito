@@ -3,7 +3,7 @@ import Checkbox from "./Checkbox";
 import styles from "./Habit.module.css";
 
 export default function Habit(props) {
-  // für desktop size nötig
+  // für desktop size notwendig
   // const daysInMonth = getDaysInMonth(props.date);
   const habitCheckboxes = [];
   for (let day = 0; day < props.days; day++) {

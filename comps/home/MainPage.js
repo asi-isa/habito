@@ -33,7 +33,12 @@ export default function MainPage() {
     const habitName = e.currentTarget.elements[0].value;
 
     // api call to supabase
-    setHabits([...habits, <Habit habitName={habitName} days={days} />]);
+    setHabits((crrHabits) => [
+      ...crrHabits,
+      <Habit habitName={habitName} days={days} />,
+    ]);
+
+    toggleNewHabitForm();
   }
 
   return (
@@ -52,9 +57,16 @@ export default function MainPage() {
         {habits}
 
         <tr className={styles.tablerow}>
-          <td className={styles.new_habit} onClick={toggleNewHabitForm}>
-            <AiOutlinePlus />
-          </td>
+          {showNewHabitForm ? (
+            <NewHabitForm
+              newHabitHandler={newHabitHandler}
+              toggleNewHabitForm={toggleNewHabitForm}
+            />
+          ) : (
+            <td className={styles.new_habit} onClick={toggleNewHabitForm}>
+              <AiOutlinePlus />
+            </td>
+          )}
         </tr>
       </table>
 

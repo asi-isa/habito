@@ -7,8 +7,11 @@
   --color-30: rgba(255, 255, 255, 0.3);
   --color-50: rgba(255, 255, 255, 0.5);
   --color-80: rgba(255, 255, 255, 0.8);
-  --accent: #f04d7a;
-  --accent-dark: #e53265;
+  --black: rgba(0, 0, 0, 1);
+  --black-30: rgba(0, 0, 0, 0.3);
+  --black-10: rgba(0, 0, 0, 0.1);
+  --accent: #700b97;
+  --accent-dark: #3e065f;
   --accent2: #2fd6b5;
   --accent3: #8838ff;
   --accent4: #28acf6;
